@@ -1,0 +1,167 @@
+##############
+# Gazlunebot config file
+##############
+#
+# Global enabled/disabled toggle; is changed by /gazlunebot enable/disable
+# Requires: boolean; Default: true
+enabled: true
+####
+# Delay between the chat event being received and the bot responding
+#   in server ticks (of which there are 20 per second)
+# Requires: positive integer; Default: 20
+# WARNING: setting this too low may make the bot respond before the triggering message is displayed
+delay: 20
+####
+# Prefix to appear before every bot message in chat; accepts MC formatting codes using &
+# Requires: string; Default: '<&dElunebot&r> '
+# NOTE: No space is provided between this and the message, so if you need one, use quotes
+prefix: '<&dElunebot&r> '
+####
+# list of ignored players, added to/removed via /elunebot ignore/unignore
+# Requires: String list; Default: empty
+ignored:
+# - notch
+# - example
+#
+####
+# Case sensitivity: if true, >ponies and >Ponies and >PoNIes etc are different commands
+# if false, they are all the same command
+casesensitive: false
+#
+#############
+# List of commands and responses, in format:
+#   <command>: <response>
+# Requires: PlainString: FormattedString; Default: (lots)
+####
+# command can only be one word (and is case-insensitive), response has no limit
+# The following codes are replaced on usage, in this order:
+# $a : the entire message after the command
+# $1 : the first word after the command
+# $2 : the second word
+# up to $5 for now
+## $1{hi} gives $1 a default of hi; without the default is the empty string
+# $p : Invoking player's name
+# $$ : a $ sign
+#
+# as $p is last, you can set the default of an earlier one to be $p, i.e. hi: hi $1{$p}
+#
+# MC colour/other format codes use &
+#
+# 2 spaces before each
+# May need to quote a string if it starts with $ or contains : (colon space - URLs are usually ok); remember to escape ' in such strings
+#
+# for full documentation, see docs
+responses:
+  Dubstap: wab wab wab wab wab wab wab wab wab wab wab
+  Elune: DAT'S MY MASTER<33333333
+  FMJ: Well, baby, me so horny. Me so HORNY. Me love you long time. You party?
+  Lo: LO LO LO LO LO LO LO LO LO LO
+  Ltdan: LIEUTENANT DAN! YOU GOT NEW LEGS!! http://i.imgur.com/luObf.jpg
+  RSWiki: http://runescape.wikia.com/wiki/RuneScape_Wiki
+  TWSS: THAT'S WHAT SHE SAID!!!!
+  Wikipedia: http://en.wikipedia.org/wiki/Main_Page
+  Yodaquote: '"What if the horse was my dad" - Yoda 2013'
+  a_pony: xcvbnm,
+  about: Hi, I am Gazlunebot, a bot originally created by Elune for IRC, adapted for bukkit by Gaz!
+  aggro: I think $1 a(n) $2 should aggro every $2s in a 40 yard radius it only makes sense you are really $3 their best friend
+  all2: '$1 all the $2? :('
+  all: '$1 ALL the $2!'
+  appeal: go to  http://runescape.wikia.com/wiki/User_talk:Gaz_Lloyd/Server if you want to appeal a ban
+  bad: Your $1 $2{is} bad and you should feel bad!
+  ban: "$1{$p} you are ban"
+  batman: Holy $1 batman!
+  beg: '$1 GIB M0N3Y PL0X'
+  bestpone: '$a{Rainbow Dash} is best pony'
+  big: '$1 you have a very big $2 $3 $4 $5 or not I''m a bot not a ruler.'
+  boats: AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS AIDS
+  boner: BOING!!!
+  bot: beep boop
+  boy: that boy ain't right...
+  bunny: http://www.youtube.com/watch?v=vXgFZgnivXs&feature=youtu.be
+  butts: butts everywhere
+  call: Hey $1 I just met you and this is crazy but here's my number so call me maybe <3
+  child: '$1 if I am a child you are a fetus'
+  debstep: wab wab wab wab wab wab wab
+  webstep: world wide web web web web web
+  derpy: I just don't know what went wrong...
+  dingleberry: http://i.imgur.com/7IieqvG.jpg Immo
+  donate: I don't want your money, give it to people who don't have clean water to drink http://www.charitywater.org/
+  donation: I don't want your money, give it to people who don't have clean water to drink http://www.charitywater.org/
+  dtm: l2dtm nolifers #winning (h)
+  dubstep: wub wub wub wub wub wub wub wub
+  dubstip: wib wib wib wib wib wob wob
+  dubstop: wob wob wob wob wob wob wob
+  ebr: ebrbrbrbrbrrbrbrbrbrbrbrbrbrbrbrbrbrbrbr
+  ed: http://www.equestriadaily.com/
+  elunebot: http://i.imgur.com/5DxtL.jpg http://imgur.com/gallery/WiBtl
+  enchant: http://www.minecraftenchantmentcalculator.com/
+  face: '$1 you are face'
+  fetusirc: http://www.gizoogle.net/index.php?search=http%3A%2F%2Frunescape.wikia.com%2Fwiki%2FUser%253AIiii_I_I_I%2Firc&se=Gizoogle+Dis+Shiznit
+  flutterbitch: http://www.youtube.com/watch?v=iyYVPIiVZsA
+  gangnam: heeeeeeeeeeeeeeeeeeeeeeey sexy $a
+  gaz: You are the epitome of all things bad.
+  gifts: http://www.youtube.com/watch?v=EuEhu2Bhb7o
+  gizoogle: http://www.gizoogle.net/
+  hate: I will not hate $1{anyone} for I am a bot of love <3
+  help: http://runescape.wikia.com/wiki/User:Elune_Anzu/Elunebot
+  hey: heyeyeeyeyyeeh
+  hi: Hi $p!
+  irc: http://webchat.freenode.net/
+  kym: http://knowyourmeme.com/
+  l: L just L
+  laugh: Everyone point at $a Point at $a and laugh!!!
+  leeroy: LEEEEEEEEEEEEROYYYYYYY JEEEEEEEEEEEENKINS@@
+  liquid: http://pastebin.com/9UXtSsTv
+  loveme: YOU'RE GOING TO LOVE ME!!!!!!!!!
+  map: http://gazserver.no-ip.org/
+  math: 1+2 is potato
+  memearrows: memearrowception
+  mlfw: http://mylittlefacewhen.com/
+  mylittlenigels: SMASHING http://www.youtube.com/watch?v=RgWwD8w1-B0
+  nope: NOPENOPENOPENOPE
+  not: me not that kind of $1 $2
+  number: '$1 I got your number 867-5309!'
+  panda: my panda goes soisoisoi to the trashcan
+  percents: hi $1 heres some $$ $$
+  pew: PEWPEWPEWPEWPEWPEWPEW
+  ping: Hey $1! Hey listen! Hey!!! $nick wants your attention!
+  pls: '$p pls'
+  ponies: I used to wonder what friendship could be until you all shared its magic with me
+  poptart: lik dis if u cry evertim
+  potato: I can count to potato! WATCH!! 1! 80085! 404! 9001! 1337! POTATO!!
+  proofstep: a_proofreader is neb neb neb neb neb neb
+  recipe: http://www.minecraftwiki.net/wiki/Crafting#Complete_recipe_list
+  recipes: http://www.minecraftwiki.net/wiki/Crafting#Complete_recipe_list
+  reddit: http://www.reddit.com/r/Gazserver http://www.reddit.com/r/Minecraft/
+  rip: RIP in peace $1{Guthix}
+  roflcopter: soisoisoi
+  rollin: see $1{me} rollin, they hatin
+  say: '$a{say what}'
+  shit: Getting real sick of your shit $a{$p}
+  site: http://runescape.wikia.com/wiki/User:Gaz_Lloyd/Server
+  smitty: smitty werbenjagermanjensen! he was number 1!
+  sof: It's time to play SQUUUUUUUEEEEEEEEEEAAALLLL OFFFFFFFFF IRL FORTUUUUUUUNUUUUUUNEE
+  spaghetti: http://momspaghetti.ytmnd.com/
+  spaghetti: http://momspaghetti.ytmnd.com/
+  spel: MASTR IZ BESEST SPELUR
+  spicypenis: '$1 $2 do you have a case of jalapenis?'
+  spin: you spin me right round baby right round like $a{yelps} baby right round round
+  stygstep: stygkitties go mew mew mew mew mew mew mew mew
+  taken: If you let $a go now, that'll be the end of it. I will not look for you, I will not pursue you. But if you don't, I will look for you, I will find you, and I will kill you.
+  test: supertest
+  thelifeofparsonsda: guys! big news! i'm existed because my mod cousin sent me faked pics of the raptor because psycho robot went too far!
+  timewarp: LEEEEEEEETTTTTTTTTT'S DOOOOOO THE TIIIIIIMEE WAAAAAAARRP AGAAAAAAAIN!
+  translate: http://ermahgerd.jmillerdesign.com/#!/translate
+  twitter: https://twitter.com/ https://twitter.com/Gaz_Lloyd
+  underpants: 'Step 1: Steal $1{$p}''s underpants. Step 2: ??? Step 3: Profit!'
+  wacky: wacky waving inflatable arm flailing tube man
+  website: http://runescape.wikia.com/wiki/User:Gaz_Lloyd/Server
+  welcome: Welcome, $1, to our server!
+  whacky: whacky waving inflatable arm flailing tube man
+  wiki: http://www.minecraftwiki.net/wiki/Minecraft_Wiki
+  wild: A wild $a appears!
+  wolo: wolowolowolwolowolowoloWOLOWOLOWOLO
+  wut: wut u wnat $1 $2 $3 $4 $5
+  xkcd: http://xkcd.com/
+  yay: http://www.youtube.com/watch?v=DLTZctTG6cE
+  yoda: '$1 Yoda, $1!'

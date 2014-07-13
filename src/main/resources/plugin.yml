@@ -1,0 +1,16 @@
+name: GazluneBot
+main: gazlloyd.Gazlunebot
+version: 1.0
+
+commands:
+  gazlunebot:
+    description: Only command for Gazlunebot
+    aliases: elunebot
+    usage: See /gazlunebot help
+    permission: gazlunebot.admin
+    permission-message: You don't have gazlunebot.admin
+
+permissions:
+  gazlunebot.admin:
+    description: Allows administration (enable/disable/reload) of Gazlunebot.
+    default: op
